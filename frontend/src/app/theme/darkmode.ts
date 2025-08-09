@@ -133,6 +133,7 @@ const glassmorphismDarkTheme: Theme = createTheme({
           borderRadius: '16px 16px 0 0',  // Keep rounded corners as you want
           boxShadow: 'none',               // Remove any shadow to avoid background effect
           border: 'none', // No border to maintain the glass effect
+          padding: '0 1rem', // Add some padding for content
         },
       },
     },
