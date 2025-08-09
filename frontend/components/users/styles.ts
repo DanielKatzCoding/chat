@@ -1,6 +1,6 @@
 import { styled, Paper } from "@mui/material";
 
-export const UsersBlock = styled(Paper)(() => ({
+export const StyledUsersBlock = styled(Paper)(() => ({
   width: '100%',
   height: '100%'
 }));

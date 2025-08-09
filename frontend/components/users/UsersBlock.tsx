@@ -1,12 +1,33 @@
 import React from 'react'
-import { UsersBlock } from './styles'
+import { StyledUsersBlock } from './styles'
+import { AppBar, Divider, List } from '@mui/material'
+import { IUser } from '../types/types' // Assuming you have a types file for IUser
+import User from './User'
 
-const Users = () => {
+const UsersBlock = ({ users }: {users: IUser[]}) => {
+
   return (
     <>
-      <UsersBlock />
+      <StyledUsersBlock>
+        <AppBar position="static">
+          <h2>Users</h2>
+        </AppBar>
+        <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+          {users.map((user, index) => (
+            <>
+              <User
+                key={index}
+                iconPath={user.iconPath}
+                name={user.name}
+                previewComment={user.comments.length > 0 ? user.comments[0].text : ''}
+              />
+              <Divider variant="inset" component="li" />            
+            </>
+          ))}
+        </List>
+      </StyledUsersBlock>
     </>
   )
 }
 
-export default Users
+export default UsersBlock

@@ -269,6 +269,63 @@ const glassmorphismDarkTheme: Theme = createTheme({
         },
       },
     },
+
+  MuiList: {
+      styleOverrides: {
+        root: {
+          backgroundColor: 'hsla(220, 15%, 12%, 0.7)',
+          backdropFilter: 'blur(15px) saturate(180%)',
+          WebkitBackdropFilter: 'blur(15px) saturate(180%)',
+          borderRadius: 16,
+          border: '1px solid hsla(0, 0%, 100%, 0.1)',
+          boxShadow: '0 6px 24px hsla(220, 30%, 2%, 0.5)',
+          padding: 0,
+        },
+      },
+    },
+    MuiListItem: {
+      styleOverrides: {
+        root: {
+          backgroundColor: 'hsla(220, 15%, 10%, 0.6)',
+          borderRadius: 12,
+          marginBottom: 8,
+          transition: 'background-color 0.3s ease',
+          '&:hover': {
+            backgroundColor: 'hsla(220, 15%, 14%, 0.8)',
+            boxShadow: '0 4px 20px hsla(220, 30%, 2%, 0.7)',
+          },
+        },
+      },
+    },
+    MuiListItemAvatar: {
+      styleOverrides: {
+        root: {
+          backgroundColor: 'hsla(220, 15%, 13%, 0.7)',
+          borderRadius: '50%',
+          marginRight: 12,
+          backdropFilter: 'blur(12px) saturate(180%)',
+          WebkitBackdropFilter: 'blur(12px) saturate(180%)',
+          border: '1px solid hsla(0, 0%, 100%, 0.12)',
+          boxShadow: '0 2px 8px hsla(220, 30%, 2%, 0.5)',
+          minWidth: 40,
+          minHeight: 40,
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        },
+      },
+    },
+    MuiListItemText: {
+      styleOverrides: {
+        primary: {
+          color: 'hsla(0, 0%, 100%, 0.9)',
+          fontWeight: 600,
+        },
+        secondary: {
+          color: 'hsla(0, 0%, 100%, 0.6)',
+        },
+      },
+    },
   },
   
   typography: {
