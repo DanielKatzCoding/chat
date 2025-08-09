@@ -127,12 +127,12 @@ const glassmorphismDarkTheme: Theme = createTheme({
     MuiAppBar: {
       styleOverrides: {
         root: {
-          backgroundColor: 'hsla(220, 20%, 6%, 0.85)', // Very dark background
-          backdropFilter: 'blur(30px) saturate(150%)',
-          WebkitBackdropFilter: 'blur(30px) saturate(150%)',
-          border: 'none',
-          borderBottom: '1px solid hsla(0, 0%, 100%, 0.05)',
-          boxShadow: '0 4px 24px hsla(220, 30%, 2%, 0.8)',
+          backgroundColor: 'transparent', // No background color
+          backdropFilter: 'none',          // Remove glass blur if any
+          WebkitBackdropFilter: 'none',   // For Safari
+          borderRadius: '16px 16px 0 0',  // Keep rounded corners as you want
+          boxShadow: 'none',               // Remove any shadow to avoid background effect
+          border: 'none', // No border to maintain the glass effect
         },
       },
     },
