@@ -12,7 +12,7 @@ const UsersBlock = ({ users }: {users: IUser[]}) => {
         <AppBar position="static">
           <h2>Users</h2>
         </AppBar>
-        <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+        <List>
           {users.map((user, index) => (
             <>
               <User

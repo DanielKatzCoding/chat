@@ -10,7 +10,7 @@ function MainContent() {
   const [users, setUsers] = useState<IUser[]>(
     [
       { iconPath: '/icons/1.png', name: 'Daniel Katz', comments: [{ text: 'Hi, how are you?', timestamp: '10:00' }] },
-      { iconPath: '/icons/2.png', name: 'Lior Sorin', comments: [{ text: 'I am tiktoker, instegramer, matimaticer, youtuber', timestamp: '10:05' }] }
+      { iconPath: '/icons/2.png', name: 'Lior Sorin', comments: [{ text: 'I am tiktoker, instagramer, matimaticer, youtuber', timestamp: '10:05' }] }
     ]
   );
 
