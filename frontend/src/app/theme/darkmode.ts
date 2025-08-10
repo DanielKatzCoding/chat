@@ -269,12 +269,8 @@ const glassmorphismDarkTheme: Theme = createTheme({
   MuiList: {
       styleOverrides: {
         root: {
-          // backgroundColor: 'hsla(220, 15%, 12%, 0.7)',
           backdropFilter: 'blur(15px) saturate(180%)',
           WebkitBackdropFilter: 'blur(15px) saturate(180%)',
-          // borderRadius: 16,
-          // border: '1px solid hsla(0, 0%, 100%, 0.1)',
-          // boxShadow: '0 6px 24px hsla(220, 30%, 2%, 0.5)',
           padding: 0,
         },
       },
@@ -282,12 +278,10 @@ const glassmorphismDarkTheme: Theme = createTheme({
     MuiListItem: {
       styleOverrides: {
         root: {
-          // backgroundColor: 'hsla(220, 15%, 10%, 0.6)',
-          // borderRadius: 12,
-          // marginBottom: 8,
-          transition: 'background-color 0.5s ease',
+          backgroundColor: 'hsla(220, 15%, 10%, 0.5)',
+          transition: 'background-color 0.3s ease',
           '&:hover': {
-            // backgroundColor: 'hsla(220, 15%, 14%, 0.8)',
+            backgroundColor: 'hsla(220, 15%, 14%, 0.8)',
             boxShadow: '0 4px 20px hsla(220, 30%, 2%, 0.7)',
           },
         },
