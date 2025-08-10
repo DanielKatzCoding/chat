@@ -4,7 +4,7 @@ import { Container } from "@mui/material"
 export default function Home() {
   return (
     <Container 
-    sx={{ height:'100vh', width:'100vw', padding: '1rem' }}
+    sx={{ height:'100vh', width:'100vw', padding:1 }}
     disableGutters={true}
     maxWidth={false}
     >

@@ -12,7 +12,14 @@ function MainContent() {
   const [users, setUsers] = useState<IUser[]>(
     [
       { iconPath: '/icons/1.png', name: 'Daniel Katz', comments: [{ text: 'Hi, how are you?', timestamp: '10:00' }] },
-      { iconPath: '/icons/2.png', name: 'Lior Sorin', comments: [{ text: 'I am tiktoker, instagramer, matimaticer, youtuber', timestamp: '10:05' }] }
+      { iconPath: '/icons/2.png', name: 'Lior Sorin', comments: [{ text: 'I am tiktoker, instagramer, matimaticer, youtuber', timestamp: '10:05' }] },
+      { iconPath: '/icons/2.png', name: 'Lior Sorin', comments: [{ text: 'I am tiktoker, instagramer, matimaticer, youtuber', timestamp: '10:05' }] },
+      { iconPath: '/icons/2.png', name: 'Lior Sorin', comments: [{ text: 'I am tiktoker, instagramer, matimaticer, youtuber', timestamp: '10:05' }] },
+      { iconPath: '/icons/2.png', name: 'Lior Sorin', comments: [{ text: 'I am tiktoker, instagramer, matimaticer, youtuber', timestamp: '10:05' }] },
+      { iconPath: '/icons/2.png', name: 'Lior Sorin', comments: [{ text: 'I am tiktoker, instagramer, matimaticer, youtuber', timestamp: '10:05' }] },
+      { iconPath: '/icons/2.png', name: 'Lior Sorin', comments: [{ text: 'I am tiktoker, instagramer, matimaticer, youtuber', timestamp: '10:05' }] },
+      { iconPath: '/icons/2.png', name: 'Lior Sorin', comments: [{ text: 'I am tiktoker, instagramer, matimaticer, youtuber', timestamp: '10:05' }] },
+      { iconPath: '/icons/2.png', name: 'Lior Sorin', comments: [{ text: 'I am tiktoker, instagramer, matimaticer, youtuber', timestamp: '10:05' }] },
     ]
   );
 
@@ -22,9 +29,10 @@ function MainContent() {
       <Grid
         container
         spacing={1}
-        sx={{ height: '100%', width: '100%' }}
+        height='100%'
+        width='100%'
         >
-          <Grid size={4}>
+          <Grid size={4} height='100%'>
             <UsersBlock users={users} />
           </Grid>
 

@@ -15,11 +15,11 @@ const UsersBlock = ({ users }: { users: IUser[] }) => {
   const usersWithIds = React.useMemo(() => getUsersWithIds(users), [users]);
 
   return (
-    <StyledUsersBlock>
-      <AppBar position="static">
+    <StyledUsersBlock style={{ height: '100%', overflow: 'hidden' }}>
+      <AppBar position="static" sx={{ height: '10%' }}>
         <h2>Users</h2>
       </AppBar>
-      <List>
+      <List sx={{ height: '90%', overflowY: 'auto' }}>
         {usersWithIds.map((user) => (
           <React.Fragment key={user._uuid}>
             <User

@@ -123,7 +123,6 @@ const glassmorphismDarkTheme: Theme = createTheme({
     MuiAppBar: {
       styleOverrides: {
         root: {
-          backgroundColor: 'transparent', // No background color
           backdropFilter: 'none',          // Remove glass blur if any
           WebkitBackdropFilter: 'none',   // For Safari
           borderRadius: '16px 16px 0 0',  // Keep rounded corners as you want
