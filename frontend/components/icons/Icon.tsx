@@ -37,7 +37,10 @@ export const Icon: React.FC<IconProps> = ({ iconPath }) => {
     <Avatar
       src={blobUrl}
       alt="User Icon"
-      sx={{ width: '5vw', height: '5vw' }} 
+      sx={{ width: '5vw', height: '5vw',
+        justifyContent: 'center',
+        alignItems: 'center',
+       }} 
     />
   )
 }

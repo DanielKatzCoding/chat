@@ -10,8 +10,8 @@ interface UserProps {
 
 const User: React.FC<UserProps> = ({ iconPath, name, previewComment }) => {
   return (
-      <ListItem alignItems="flex-start">
-        <ListItemAvatar>
+      <ListItem>
+        <ListItemAvatar sx={{ marginRight: 1 }}>
           <Icon iconPath={iconPath} />
         </ListItemAvatar>
         <ListItemText

@@ -283,6 +283,7 @@ const glassmorphismDarkTheme: Theme = createTheme({
           '&:hover': {
             backgroundColor: 'hsla(220, 15%, 14%, 0.8)',
             boxShadow: '0 4px 20px hsla(220, 30%, 2%, 0.7)',
+            cursor: 'pointer',
           },
         },
       },
@@ -292,7 +293,6 @@ const glassmorphismDarkTheme: Theme = createTheme({
         root: {
           backgroundColor: 'hsla(220, 15%, 13%, 0.7)',
           borderRadius: '50%',
-          marginRight: 12,
           backdropFilter: 'blur(12px) saturate(180%)',
           WebkitBackdropFilter: 'blur(12px) saturate(180%)',
           border: '1px solid hsla(0, 0%, 100%, 0.12)',

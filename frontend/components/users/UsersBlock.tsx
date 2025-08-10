@@ -3,31 +3,36 @@ import { StyledUsersBlock } from './styles'
 import { AppBar, Divider, List } from '@mui/material'
 import { IUser } from '../types/types' // Assuming you have a types file for IUser
 import User from './User'
+import { v4 as uuidv4 } from 'uuid';
 
-const UsersBlock = ({ users }: {users: IUser[]}) => {
+
+// Assign a random UUID to each user once
+const getUsersWithIds = (users: IUser[]) => {
+  return users.map(user => ({ ...user, _uuid: uuidv4() }));
+};
+
+const UsersBlock = ({ users }: { users: IUser[] }) => {
+  const usersWithIds = React.useMemo(() => getUsersWithIds(users), [users]);
 
   return (
-    <>
-      <StyledUsersBlock>
-        <AppBar position="static">
-          <h2>Users</h2>
-        </AppBar>
-        <List>
-          {users.map((user, index) => (
-            <>
-              <User
-                key={index}
-                iconPath={user.iconPath}
-                name={user.name}
-                previewComment={user.comments.length > 0 ? user.comments[0].text : ''}
-              />
-              <Divider variant="inset" component="li" />            
-            </>
-          ))}
-        </List>
-      </StyledUsersBlock>
-    </>
-  )
+    <StyledUsersBlock>
+      <AppBar position="static">
+        <h2>Users</h2>
+      </AppBar>
+      <List>
+        {usersWithIds.map((user) => (
+          <React.Fragment key={user._uuid}>
+            <User
+              iconPath={user.iconPath}
+              name={user.name}
+              previewComment={user.comments.length > 0 ? user.comments[0].text : ''}
+            />
+            <Divider variant="inset" component="li" />
+          </React.Fragment>
+        ))}
+      </List>
+    </StyledUsersBlock>
+  );
 }
 
 export default UsersBlock
