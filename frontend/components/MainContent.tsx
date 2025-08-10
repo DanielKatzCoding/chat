@@ -5,6 +5,8 @@ import { ThemeProvider } from '@mui/material/styles';
 import UsersBlock from './users/UsersBlock';
 import glassmorphismDarkTheme from '@/app/theme/darkmode';
 import { IUser } from './types/types'; // Assuming you have a types file for IUser
+import ChatBlock from './chat/ChatBlock';
+import { Chat } from '@mui/icons-material';
 
 function MainContent() {
   const [users, setUsers] = useState<IUser[]>(
@@ -27,9 +29,7 @@ function MainContent() {
           </Grid>
 
           <Grid size={8}>
-            <Paper variant="outlined">
-              Another Hello World
-            </Paper>
+            <ChatBlock />
           </Grid>
         </Grid>
     </ThemeProvider>
