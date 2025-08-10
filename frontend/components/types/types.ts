@@ -1,5 +1,16 @@
 export interface IUser {
   iconPath: string;
   name: string;
-  comments: Array<{ text: string; timestamp: string }>;
+  chats: IChat[];
+}
+
+export interface IChat {
+  text: string;
+  timestamp: string;
+  bound: ChatBound;
+}
+
+export enum ChatBound {
+  incoming = 'incoming',
+  outgoing = 'outgoing',
 }

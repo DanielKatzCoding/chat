@@ -1,5 +1,5 @@
 import React from 'react'
-import { List, ListItem, ListItemAvatar, Avatar, ListItemText, Typography } from '@mui/material';
+import { ListItem, ListItemAvatar, ListItemText, Typography } from '@mui/material';
 import { Icon } from '../icons/Icon';
 
 interface UserProps {

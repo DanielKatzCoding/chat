@@ -1,25 +1,20 @@
 "use client"
 import React, { useState } from 'react';
-import { Grid, Paper, CssBaseline } from "@mui/material";
+import { Grid, CssBaseline } from "@mui/material";
 import { ThemeProvider } from '@mui/material/styles';
 import UsersBlock from './users/UsersBlock';
 import glassmorphismDarkTheme from '@/app/theme/darkmode';
-import { IUser } from './types/types'; // Assuming you have a types file for IUser
+import { IUser, ChatBound } from './types/types'; // Assuming you have a types file for IUser
 import ChatBlock from './chat/ChatBlock';
-import { Chat } from '@mui/icons-material';
 
 function MainContent() {
   const [users, setUsers] = useState<IUser[]>(
     [
-      { iconPath: '/icons/1.png', name: 'Daniel Katz', comments: [{ text: 'Hi, how are you?', timestamp: '10:00' }] },
-      { iconPath: '/icons/2.png', name: 'Lior Sorin', comments: [{ text: 'I am tiktoker, instagramer, matimaticer, youtuber', timestamp: '10:05' }] },
-      { iconPath: '/icons/2.png', name: 'Lior Sorin', comments: [{ text: 'I am tiktoker, instagramer, matimaticer, youtuber', timestamp: '10:05' }] },
-      { iconPath: '/icons/2.png', name: 'Lior Sorin', comments: [{ text: 'I am tiktoker, instagramer, matimaticer, youtuber', timestamp: '10:05' }] },
-      { iconPath: '/icons/2.png', name: 'Lior Sorin', comments: [{ text: 'I am tiktoker, instagramer, matimaticer, youtuber', timestamp: '10:05' }] },
-      { iconPath: '/icons/2.png', name: 'Lior Sorin', comments: [{ text: 'I am tiktoker, instagramer, matimaticer, youtuber', timestamp: '10:05' }] },
-      { iconPath: '/icons/2.png', name: 'Lior Sorin', comments: [{ text: 'I am tiktoker, instagramer, matimaticer, youtuber', timestamp: '10:05' }] },
-      { iconPath: '/icons/2.png', name: 'Lior Sorin', comments: [{ text: 'I am tiktoker, instagramer, matimaticer, youtuber', timestamp: '10:05' }] },
-      { iconPath: '/icons/2.png', name: 'Lior Sorin', comments: [{ text: 'I am tiktoker, instagramer, matimaticer, youtuber', timestamp: '10:05' }] },
+      { iconPath: '/icons/1.png', name: 'Daniel Katz', chats: [{ text: 'Hi, how are you?', timestamp: '10:00', bound: ChatBound.outgoing }] },
+      { iconPath: '/icons/2.png', name: 'Lior Sorin', chats: [{ text: 'I am tiktoker, instagramer, matimaticer, youtuber', timestamp: '10:05', bound: ChatBound.incoming }] },
+      { iconPath: '/icons/2.png', name: 'Lior Sorin', chats: [{ text: 'I am tiktoker, instagramer, matimaticer, youtuber', timestamp: '10:05', bound: ChatBound.incoming }] },
+      { iconPath: '/icons/2.png', name: 'Lior Sorin', chats: [{ text: 'I am tiktoker, instagramer, matimaticer, youtuber', timestamp: '10:05', bound: ChatBound.incoming }] },
+      { iconPath: '/icons/2.png', name: 'Lior Sorin', chats: [{ text: 'I am tiktoker, instagramer, matimaticer, youtuber', timestamp: '10:05', bound: ChatBound.incoming }] },
     ]
   );
 
@@ -37,7 +32,7 @@ function MainContent() {
           </Grid>
 
           <Grid size={8}>
-            <ChatBlock />
+            {/* <ChatBlock /> */}
           </Grid>
         </Grid>
     </ThemeProvider>

@@ -25,7 +25,7 @@ const UsersBlock = ({ users }: { users: IUser[] }) => {
             <User
               iconPath={user.iconPath}
               name={user.name}
-              previewComment={user.comments.length > 0 ? user.comments[0].text : ''}
+              previewComment={user.chats.length > 0 ? user.chats[0].text : ''}
             />
             <Divider variant="inset" component="li" />
           </React.Fragment>
