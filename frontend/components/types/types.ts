@@ -1,10 +1,10 @@
 export interface IUser {
   iconPath: string;
   name: string;
-  chats: IChat[];
+  chat: IMsg[];
 }
 
-export interface IChat {
+export interface IMsg {
   text: string;
   timestamp: string;
   bound: ChatBound;
