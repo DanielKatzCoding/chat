@@ -1,7 +1,14 @@
+
+
 export interface IUser {
+  id: string;
   iconPath: string;
   name: string;
-  chat: IMsg[];
+}
+
+export interface IChat {
+  id: string;
+  msgs: IMsg[]
 }
 
 export interface IMsg {

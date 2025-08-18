@@ -3,16 +3,16 @@ import React, { useContext } from 'react'
 import { ListItem, ListItemAvatar, ListItemText, Typography, Box } from '@mui/material';
 import { Icon } from '../icons/Icon';
 import { SelectedUserContext } from '../MainContent';
-import { IUser } from '../types/types';
+import { IMsg, IUser } from '../types/types';
 
-const User = ({ user }: { user: IUser }) => {
+const User = ({ user, msgs }: { user: IUser, msgs: IMsg[] }) => {
   const { selectedUser, setSelectedUser } = useContext(SelectedUserContext);
   return (
     <ListItem
       sx={{
         alignItems: 'stretch'
       }}
-      onClick={() => { setSelectedUser(user) }}
+      onClick={() => { setSelectedUser(user.id) }}
     >
       <ListItemAvatar sx={{ marginRight: 1 }}>
         <Icon iconPath={user.iconPath} />
@@ -38,7 +38,7 @@ const User = ({ user }: { user: IUser }) => {
               marginRight: 1
             }}
           >
-            {user.chat.length > 0 ? user.chat[user.chat.length - 1].text : ''}
+            {msgs.length > 0 ? msgs[msgs.length - 1].text : ''}
             <span
               style={{
                 position: 'absolute',
@@ -51,7 +51,7 @@ const User = ({ user }: { user: IUser }) => {
                 borderRadius: '4px'
               }}
             >
-              {user.chat.length > 0 ? user.chat[user.chat.length - 1].timestamp : ''}
+              {msgs.length > 0 ? msgs[msgs.length - 1].timestamp : ''}
             </span>
           </Typography>
         }

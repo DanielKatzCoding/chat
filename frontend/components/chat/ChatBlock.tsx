@@ -4,7 +4,7 @@ import { StyledChatBlock } from './styles'
 import { Box } from '@mui/material'
 import { IMsg } from '../types/types'
 
-const ChatBlock = ({ chat }: {chat: IMsg[] | undefined }) => {
+const ChatBlock = () => {
   return (
     <StyledChatBlock>
       
