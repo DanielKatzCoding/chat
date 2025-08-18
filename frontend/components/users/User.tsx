@@ -5,46 +5,58 @@ import { Icon } from '../icons/Icon';
 import { SelectedUserContext } from '../MainContent';
 import { IUser } from '../types/types';
 
-const User = ({user}: {user: IUser}) => {
-  const {selectedUser, setSelectedUser} = useContext(SelectedUserContext);
+const User = ({ user }: { user: IUser }) => {
+  const { selectedUser, setSelectedUser } = useContext(SelectedUserContext);
   return (
-      <ListItem
-        sx={{
-          alignItems: 'stretch'
-        }}
-        onClick={() => {}}
-      >
-        <ListItemAvatar sx={{ marginRight: 1 }}>
-          <Icon iconPath={user.iconPath} />
-        </ListItemAvatar>
-        <ListItemText
-          primary={
-            <Typography variant="subtitle1" sx={{ fontWeight: 'bold', justifyContent: 'flex-start' }}>
-              {user.name}
-            </Typography>
-          }
-          secondary={
-            <Typography
-              variant="body2"
-              color="text.disabled"
-              sx={{
-                display: '-webkit-box',
-                overflow: 'hidden',
-                WebkitLineClamp: 2,         // limit to 2 lines
-                WebkitBoxOrient: 'vertical',
-                textOverflow: 'ellipsis',
-                flex: 1,
-                marginRight: 1
+    <ListItem
+      sx={{
+        alignItems: 'stretch'
+      }}
+      onClick={() => { setSelectedUser(user) }}
+    >
+      <ListItemAvatar sx={{ marginRight: 1 }}>
+        <Icon iconPath={user.iconPath} />
+      </ListItemAvatar>
+      <ListItemText
+        primary={
+          <Typography variant="h5" sx={{ fontWeight: 'bold', justifyContent: 'flex-start' }}>
+            {user.name}
+          </Typography>
+        }
+        secondary={
+          <Typography
+            variant="body1"
+            color="text.disabled"
+            sx={{
+              position: 'relative',
+              display: '-webkit-box',
+              overflow: 'hidden',
+              WebkitLineClamp: 2,
+              WebkitBoxOrient: 'vertical',
+              textOverflow: 'ellipsis',
+              flex: 1,
+              marginRight: 1
+            }}
+          >
+            {user.chat.length > 0 ? user.chat[user.chat.length - 1].text : ''}
+            <span
+              style={{
+                position: 'absolute',
+                top: 0,
+                right: 0,
+                fontSize: '0.75rem',
+                color: '#888',
+                background: 'rgba(255,255,255,0.7)',
+                padding: '2px 6px',
+                borderRadius: '4px'
               }}
-              >
-              {user.chat.length > 0 ? user.chat[user.chat.length-1].text : ''}
-              
-              {user.chat.length > 0 ? user.chat[user.chat.length-1].timestamp : ''}
-
-            </Typography>
-          }
-        />
-      </ListItem>
+            >
+              {user.chat.length > 0 ? user.chat[user.chat.length - 1].timestamp : ''}
+            </span>
+          </Typography>
+        }
+      />
+    </ListItem>
   )
 }
 
