@@ -29,14 +29,14 @@ const ChatBlock = () => {
                   ))
                 : (
                   <ListItem sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
-                    <img src="/static/emptyChat.svg" alt="No messages yet" width={400} style={{ marginTop: '10vw' }} />
+                    <img src="/static/emptyChat.svg" alt="No messages yet" width={400} style={{ marginTop: '10vh' }} />
                     <Typography variant="h4" color="text.disabled">No messages yet</Typography>
                   </ListItem>
                 )                
               )
             : (
                 <ListItem sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
-                  <img src="/static/defaultChat.svg" alt="No user selected" width={500} style={{ marginTop: '10vw' }} />
+                  <img src="/static/defaultChat.svg" alt="No user selected" width={500} style={{ marginTop: '10vh' }} />
                   <Typography variant="h4" color="text.disabled">No user selected</Typography>
                 </ListItem>
               )

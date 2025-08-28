@@ -11,7 +11,7 @@ const UsersBlock = () => {
   return (
     <StyledUsersBlock style={{ height: '100%', overflow: 'hidden' }}>
       <AppBar position="static" sx={{ height: '10%', justifyContent: 'center' }}>
-        <Typography variant="h2" color="textPrimary" sx={{ padding: 1 }}>
+        <Typography variant="h3" color="textPrimary" sx={{ padding: 1 }}>
           Users
         </Typography>
       </AppBar>
