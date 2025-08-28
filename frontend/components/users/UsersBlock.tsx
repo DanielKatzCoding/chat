@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyledUsersBlock, StyledList } from './styles'
-import { AppBar, Divider, List } from '@mui/material'
+import { AppBar, Divider, List, Typography } from '@mui/material'
 import User from './User'
 import { Users } from '../mockData/user'
 import { Chats } from '../mockData/chats'
@@ -10,8 +10,10 @@ const UsersBlock = () => {
 
   return (
     <StyledUsersBlock style={{ height: '100%', overflow: 'hidden' }}>
-      <AppBar position="static" sx={{ height: '10%' }}>
-        <h2>Users</h2>
+      <AppBar position="static" sx={{ height: '10%', justifyContent: 'center' }}>
+        <Typography variant="h2" color="textPrimary" sx={{ padding: 1 }}>
+          Users
+        </Typography>
       </AppBar>
       <StyledList sx={{ height: '90%', overflowY: 'auto' }}>
         {
