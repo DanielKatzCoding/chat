@@ -1,4 +1,4 @@
-import { styled, Paper, List, ListItem } from "@mui/material";
+import { styled, Paper } from "@mui/material";
 
 export const StyledChatBlock = styled(Paper)(() => ({
   width: '100%',

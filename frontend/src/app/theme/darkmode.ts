@@ -80,7 +80,7 @@ const glassmorphismDarkTheme: Theme = createTheme({
     // Paper - Core dark glassmorphism component
     MuiPaper: {
       styleOverrides: {
-        root: ({ theme, ownerState }) => ({
+        root: ({ ownerState }) => ({
           backgroundColor: 'hsla(220, 15%, 8%, 0.75)', // Dark glass background
           backdropFilter: 'blur(20px) saturate(180%)',
           WebkitBackdropFilter: 'blur(20px) saturate(180%)',

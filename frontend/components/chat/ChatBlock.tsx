@@ -1,13 +1,14 @@
 "use client"
-import React, { useState, useContext } from 'react'
+import React, { useContext } from 'react'
 import { StyledChatBlock } from './styles'
 import { SelectedUserContext } from '../MainContent'
 import { List, ListItem, Typography } from '@mui/material'
 import { Chats } from '../mockData/chats'
+import Image from 'next/image'
 import Msg from './msg/Msg'
 
 const ChatBlock = () => {
-  const { selectedUser, setSelectedUser } = useContext(SelectedUserContext);
+  const { selectedUser } = useContext(SelectedUserContext);
   const msgs =
     selectedUser
       ? Chats.filter(chat => chat.id === selectedUser)[0]?.msgs || []
@@ -29,14 +30,14 @@ const ChatBlock = () => {
                   ))
                 : (
                   <ListItem sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
-                    <img src="/static/emptyChat.svg" alt="No messages yet" width={400} style={{ marginTop: '10vh' }} />
+                    <Image src="/static/emptyChat.svg" alt="No messages yet" width={400} height={400} style={{ marginTop: '10vh' }} />
                     <Typography variant="h4" color="text.disabled">No messages yet</Typography>
                   </ListItem>
                 )                
               )
             : (
                 <ListItem sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
-                  <img src="/static/defaultChat.svg" alt="No user selected" width={500} style={{ marginTop: '10vh' }} />
+                  <Image src="/static/defaultChat.svg" alt="No user selected" width={500} height={500} style={{ marginTop: '10vh' }} />
                   <Typography variant="h4" color="text.disabled">No user selected</Typography>
                 </ListItem>
               )

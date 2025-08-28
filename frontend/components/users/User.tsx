@@ -7,7 +7,7 @@ import { SelectedUserContext } from '../MainContent';
 import { IMsg, IUser } from '../types/types';
 
 const User = ({ user, msgs }: { user: IUser, msgs: IMsg[] }) => {
-  const { selectedUser, setSelectedUser } = useContext(SelectedUserContext);
+  const { setSelectedUser } = useContext(SelectedUserContext);
   return (
     <StyledListItem
       sx={{

@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyledUsersBlock, StyledList } from './styles'
-import { AppBar, Divider, List, Typography } from '@mui/material'
+import { AppBar, Divider, Typography } from '@mui/material'
 import User from './User'
 import { Users } from '../mockData/user'
 import { Chats } from '../mockData/chats'
