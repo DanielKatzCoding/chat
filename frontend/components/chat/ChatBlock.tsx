@@ -19,11 +19,20 @@ const ChatBlock = () => {
         {
           selectedUser
             ? (
-                msgs.map((msg, idx) => (
-                  <ListItem key={idx} component="div" disableGutters sx={{ display: 'flex', justifyContent: msg.bound === 'outgoing' ? 'flex-end' : 'flex-start' }}>
-                    <Msg msg={msg} />
+                msgs.length != 0
+                  ? (
+                    msgs.map((msg, idx) => (
+                    <ListItem key={idx} component="div" disableGutters sx={{ display: 'flex', justifyContent: msg.bound === 'outgoing' ? 'flex-end' : 'flex-start' }}>
+                      <Msg msg={msg} />
+                    </ListItem>
+                    )
+                  ))
+                : (
+                  <ListItem sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+                    <img src="/static/emptyChat.svg" alt="No messages yet" width={400} style={{ marginTop: '10vw' }} />
+                    <Typography variant="h4" color="text.disabled">No messages yet</Typography>
                   </ListItem>
-                ))
+                )                
               )
             : (
                 <ListItem sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
