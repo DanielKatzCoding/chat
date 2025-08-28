@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyledUsersBlock } from './styles'
+import { StyledUsersBlock, StyledList } from './styles'
 import { AppBar, Divider, List } from '@mui/material'
 import User from './User'
 import { Users } from '../mockData/user'
@@ -13,7 +13,7 @@ const UsersBlock = () => {
       <AppBar position="static" sx={{ height: '10%' }}>
         <h2>Users</h2>
       </AppBar>
-      <List sx={{ height: '90%', overflowY: 'auto' }}>
+      <StyledList sx={{ height: '90%', overflowY: 'auto' }}>
         {
           Users.map((user) => (
             <React.Fragment key={user.id}>
@@ -26,7 +26,7 @@ const UsersBlock = () => {
               <Divider variant="inset" component="li" />
             </React.Fragment>
           ))}
-      </List>
+      </StyledList>
     </StyledUsersBlock>
   );
 }

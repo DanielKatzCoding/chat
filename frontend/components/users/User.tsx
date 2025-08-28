@@ -1,6 +1,7 @@
 "use client"
 import React, { useContext } from 'react'
-import { ListItem, ListItemAvatar, ListItemText, Typography, Box } from '@mui/material';
+import { ListItemAvatar, Typography } from '@mui/material';
+import { StyledListItem, StyledListItemText } from './styles';
 import { Icon } from '../icons/Icon';
 import { SelectedUserContext } from '../MainContent';
 import { IMsg, IUser } from '../types/types';
@@ -8,7 +9,7 @@ import { IMsg, IUser } from '../types/types';
 const User = ({ user, msgs }: { user: IUser, msgs: IMsg[] }) => {
   const { selectedUser, setSelectedUser } = useContext(SelectedUserContext);
   return (
-    <ListItem
+    <StyledListItem
       sx={{
         alignItems: 'stretch'
       }}
@@ -17,7 +18,7 @@ const User = ({ user, msgs }: { user: IUser, msgs: IMsg[] }) => {
       <ListItemAvatar sx={{ marginRight: 1 }}>
         <Icon iconPath={user.iconPath} />
       </ListItemAvatar>
-      <ListItemText
+      <StyledListItemText
         primary={
           <Typography variant="h5" sx={{ fontWeight: 'bold', justifyContent: 'flex-start' }}>
             {user.name}
@@ -56,7 +57,7 @@ const User = ({ user, msgs }: { user: IUser, msgs: IMsg[] }) => {
           </Typography>
         }
       />
-    </ListItem>
+    </StyledListItem>
   )
 }
 
