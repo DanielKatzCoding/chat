@@ -20,7 +20,7 @@ const UsersBlock = () => {
               <User
                 user={user}
                 msgs={
-                  Chats.filter(chat => chat.id === user.id)[0].msgs
+                  Chats.filter(chat => chat.id === user.id)[0]?.msgs || []
                 }
               />
               <Divider variant="inset" component="li" />
