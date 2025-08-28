@@ -33,9 +33,9 @@ function MainContent() {
               <UsersBlock />
             </Grid>
 
-            <Grid size={8}>
-              <ChatBlock />
-            </Grid>
+          <Grid size={8} height="100%">
+            <ChatBlock />
+          </Grid>
           </SelectedUserContext.Provider>
         </Grid>
     </ThemeProvider>

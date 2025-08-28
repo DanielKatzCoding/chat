@@ -27,7 +27,7 @@ const ChatBlock = () => {
               )
             : (
                 <ListItem sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
-                  <img src="/static/defaultChat.svg" alt="No user selected" width={400} style={{ marginTop: '10vw' }} />
+                  <img src="/static/defaultChat.svg" alt="No user selected" width={500} style={{ marginTop: '10vw' }} />
                   <Typography variant="h4" color="text.disabled">No user selected</Typography>
                 </ListItem>
               )

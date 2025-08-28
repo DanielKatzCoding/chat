@@ -7,6 +7,16 @@ export const Chats: IChat[] = [
             { text: 'Hi, how are you?', timestamp: '10:00', bound: ChatBound.outgoing },
             { text: 'Good, what\'s up?', timestamp: '10:05', bound: ChatBound.incoming },
             { text: 'Alright... you wanna go out?', timestamp: '10:09', bound: ChatBound.outgoing },
+            { text: 'Alright... you wanna go out?', timestamp: '10:09', bound: ChatBound.outgoing },
+            { text: 'Alright... you wanna go out?', timestamp: '10:09', bound: ChatBound.outgoing },
+            { text: 'Alright... you wanna go out?', timestamp: '10:09', bound: ChatBound.outgoing },
+            { text: 'Alright... you wanna go out?', timestamp: '10:09', bound: ChatBound.outgoing },
+            { text: 'Alright... you wanna go out?', timestamp: '10:09', bound: ChatBound.outgoing },
+            { text: 'Alright... you wanna go out?', timestamp: '10:09', bound: ChatBound.outgoing },
+            { text: 'Alright... you wanna go out?', timestamp: '10:09', bound: ChatBound.outgoing },
+            { text: 'Alright... you wanna go out?', timestamp: '10:09', bound: ChatBound.outgoing },
+            { text: 'Alright... you wanna go out?', timestamp: '10:09', bound: ChatBound.outgoing },
+            { text: 'Alright... you wanna go out?', timestamp: '10:09', bound: ChatBound.outgoing },
         ]
     }
 ]
