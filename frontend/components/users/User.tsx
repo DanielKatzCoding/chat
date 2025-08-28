@@ -39,7 +39,9 @@ const User = ({ user, msgs }: { user: IUser, msgs: IMsg[] }) => {
               marginRight: 1
             }}
           >
-            {msgs.length > 0 ? msgs[msgs.length - 1].text : ''}
+            <span style={{ maxWidth: '90%', display: 'block' }}>
+              {msgs.length > 0 ? msgs[msgs.length - 1].text : ''}
+            </span>
             <span
               style={{
                 position: 'absolute',

@@ -4,7 +4,7 @@ import { ListItemText, Paper, Typography } from '@mui/material'
 
 const Msg = ({ msg }: { msg: IMsg }) => {
   return (
-    <Paper elevation={3} sx={{ padding: 2, marginBottom: 1 }}>
+    <Paper elevation={3} sx={{ padding: 2, marginBottom: 1, maxWidth: '40%' }}>
       <ListItemText
         primary={
           <Typography variant="body1" sx={{ wordBreak: 'break-word' }}>
